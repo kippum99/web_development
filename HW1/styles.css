@@ -6,6 +6,7 @@
  * This is the styles.css file for the HTML and the Internet website.
  */
 
+
 /* Styles for all flex containers */
 body, main, footer, .main-structure, #header-text-container,
 #examples article, #examples > article > div, #html-comparison, #html-structure, #html5-structure {
@@ -21,12 +22,16 @@ body,  #examples > article > div, #html-structure, #html5-structure {
 
 /* Custom colors */
 
+body {
+  color: #364958;
+}
+
 h1, h2, main > section a, footer {
   color: #3b6064;
 }
 
-body {
-  color: #364958;
+main > section a:visited {
+  color: #c9e4ca;
 }
 
 aside {
@@ -42,16 +47,32 @@ section, #examples > article > div {
 }
 
 
-/* Other styles */
+/* Text styles */
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+code, pre {
+  font-weight: bold;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+
+/* Styles for body */
 
 body {
   margin: 0px;
   background-color: #c9e4ca;
   font-family: Ubuntu, Verdana, sans-serif;
-}
-
-code, pre {
-  font-weight: bold;
 }
 
 
@@ -62,6 +83,21 @@ header, footer {
 
 footer, #header-text-container {
   align-items: center;
+}
+
+footer {
+  padding-bottom: 10px;
+}
+
+footer p {
+  padding: 0px 10px;
+}
+
+header h1, footer h1 {
+  margin: 0px;
+  padding: 0px 10px;
+  line-height: 60px;
+  font-size: 24pt;
 }
 
 nav ul {
@@ -89,6 +125,11 @@ main {
 main > section {
   padding: 10px;
 }
+
+main > section a:visited {
+  color: #c9e4ca;
+}
+
 
 /* Styles for main body - examples section */
 
@@ -185,38 +226,10 @@ figure img {
 }
 
 
-/* Other Styles */
+/* Styles for side bar */
 
 aside {
   margin-left: 10px;
   padding: 0px 10px;
   min-width: 200px;
-}
-
-footer {
-  padding-bottom: 10px;
-}
-
-footer p {
-  padding: 0px 10px;
-}
-
-header h1, footer h1 {
-  margin: 0px;
-  padding: 0px 10px;
-  line-height: 60px;
-  font-size: 24pt;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-main > section a:visited {
-  color: #c9e4ca;
-}
-
-figcaption {
-  font-style: italic;
 }
