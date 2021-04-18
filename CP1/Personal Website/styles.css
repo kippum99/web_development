@@ -1,0 +1,35 @@
+/*
+  Name: June Kim
+  CS 101 Spring 2021
+  Date: April 9, 2021
+
+  This is the styles.css page for my personal website.
+  It is used by all pages to give the site a consistent look and feel.
+*/
+
+body {
+  padding: 30pt;
+  background-color: #14131f;
+}
+
+a, h1, li, p {
+  font-family: 'Cutive Mono', monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  color: #05d9e8;
+  font-weight: normal;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  color: #d1f7ff;
+}

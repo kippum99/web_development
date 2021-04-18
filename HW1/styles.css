@@ -1,0 +1,222 @@
+/*
+ * Author: June Kim
+ * CS 101 Spring 2021
+ * Date: April 16, 2021
+ *
+ * This is the styles.css file for the HTML and the Internet website.
+ */
+
+/* Styles for all flex containers */
+body, main, footer, .main-structure, #header-text-container,
+#examples article, #examples > article > div, #html-comparison, #html-structure, #html5-structure {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styles for flex containers that are in column layout */
+body,  #examples > article > div, #html-structure, #html5-structure {
+  flex-direction: column;
+}
+
+
+/* Custom colors */
+
+h1, h2, main > section a, footer {
+  color: #3b6064;
+}
+
+body {
+  color: #364958;
+}
+
+aside {
+  color: #fdfdfd;
+}
+
+nav ul, aside, #examples > article {
+  background-color: #3b6064;
+}
+
+section, #examples > article > div {
+  background-color: #fdfdfd;
+}
+
+
+/* Other styles */
+
+body {
+  margin: 0px;
+  background-color: #c9e4ca;
+  font-family: Ubuntu, Verdana, sans-serif;
+}
+
+code, pre {
+  font-weight: bold;
+}
+
+
+/* Styles for header and footer */
+header, footer {
+  width: 100%;
+}
+
+footer, #header-text-container {
+  align-items: center;
+}
+
+nav ul {
+  margin: 0px;
+  padding: 5px;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+}
+
+nav li a {
+  margin-left: 15px;
+  color: #c9e4ca;
+}
+
+
+/* Styles for main body */
+
+main {
+  padding: 10px;
+}
+
+main > section {
+  padding: 10px;
+}
+
+/* Styles for main body - examples section */
+
+#examples pre {
+  padding: 10px;
+  overflow-x: scroll;
+  background-color: #d3d3d3;
+}
+
+#examples h1 {
+  margin: 1em 0 0;
+  font-size: 16pt;
+}
+
+#examples img {
+  width: 100px;
+}
+
+#examples article {
+  margin: 5px;
+  padding: 10px;
+}
+
+#examples > article > div {
+  padding: 0 2%;
+  width: 45%;
+}
+
+#examples > article > div > p {
+  text-align: right;
+  font-style: italic;
+}
+
+
+/* Styles for main body - history section */
+
+figure {
+  float: right;
+}
+
+figure img {
+  width: 100%;
+}
+
+#figure-comic {
+  width: 50%;
+  max-width: 400px;
+}
+
+#figure-w3c-logo {
+  margin: 0px 20px 20px;
+  width: 120px;
+}
+
+
+/* Styles for main body - html5 section */
+
+#html-comparison {
+  text-align: center;
+}
+
+#html-comparison div {
+  padding: 5px;
+}
+
+#html-structure, #html5-structure {
+  border: 4px solid black;
+  width: 45%;
+  height: 300px;
+}
+
+#html-structure div, #html5-structure div {
+  border: 2px solid black;
+}
+
+.main-structure {
+  flex-grow: 1;
+}
+
+.main-structure > div {
+  width: 40%;
+}
+
+#tim-quote {
+  font-style: italic;
+}
+
+#tim-quote blockquote {
+  border-bottom: 2px solid black;
+}
+
+#tim-quote figcaption {
+  text-align: right;
+}
+
+
+/* Other Styles */
+
+aside {
+  margin-left: 10px;
+  padding: 0px 10px;
+  min-width: 200px;
+}
+
+footer {
+  padding-bottom: 10px;
+}
+
+footer p {
+  padding: 0px 10px;
+}
+
+header h1, footer h1 {
+  margin: 0px;
+  padding: 0px 10px;
+  line-height: 60px;
+  font-size: 24pt;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main > section a:visited {
+  color: #c9e4ca;
+}
+
+figcaption {
+  font-style: italic;
+}

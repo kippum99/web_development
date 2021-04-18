@@ -1,0 +1,36 @@
+/*
+  Name: June Kim
+  CS 101 Spring 2021
+  Date: April 9, 2021
+
+  This is the custom styles sheet for the work.html page of my personal website.
+*/
+
+section {
+  padding: 25pt 0pt 0pt;
+}
+
+a {
+  border: 1pt solid #ff2a6d;
+  padding: 5pt;
+  color: #ff2a6d;
+}
+
+#work-experience-dates {
+  display: inline-block;
+  border-right: 1pt solid #ff2a6d;
+  color: #ff2a6d;
+}
+
+#work-experience-dates li {
+  padding: 10pt;
+}
+
+#work-experience-companies {
+  display: inline-block;
+  color: #d1f7ff;
+}
+
+#work-experience-companies li {
+  padding: 10pt;
+}

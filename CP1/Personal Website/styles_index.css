@@ -1,0 +1,29 @@
+/*
+  Name: June Kim
+  CS 101 Spring 2021
+  Date: April 9, 2021
+
+  This is the custom styles sheet for the index.html page of my personal website.
+*/
+
+h1 {
+  margin: 100pt;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+  margin-left: 10pt;
+  margin-right: 10pt;
+  border: 1pt solid transparent;
+  padding: 5pt;
+  color: #ff2a6d;
+}
+
+nav li:hover {
+  border: 1pt solid #ff2a6d;
+}
