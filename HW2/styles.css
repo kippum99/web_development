@@ -27,7 +27,7 @@ h2 {
   font-size: 16pt;
 }
 
-.hidden {
+.hidden, .hide-imgs img {
   display: none;
 }
 
@@ -48,7 +48,7 @@ h2 {
 }
 
 
-/* Styles for teh game view */
+/* Styles for the game view */
 
 .card {
   display: flex;
@@ -68,6 +68,11 @@ h2 {
 
 .card img {
   height: 85%;
+}
+
+.card p {
+  font-size: 16pt;
+  font-weight: bold;
 }
 
 #details-bar {
