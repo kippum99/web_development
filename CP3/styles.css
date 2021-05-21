@@ -1,0 +1,97 @@
+/*
+  Name: June Kim
+  CS 101 Spring 2021
+  Date: April 29, 2021
+
+  This is the styles.css file for the Salt Covenant Church website.
+  It is used by all pages to give the site a consistent look and feel.
+*/
+
+body {
+  margin: 0px;
+}
+
+h1, h2 {
+  margin: 10px;
+  color: #5f939a;
+  text-transform: uppercase;
+}
+
+li {
+  list-style-type: none;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Styles for the top header */
+
+#header-top-bar {
+  padding: 0px 20px;
+}
+
+
+/* Styles for the navigation bar */
+
+nav {
+  height: 60px;
+  background-color: #eac8af;
+  text-align: center;
+}
+
+nav > ul > li {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 60px;
+  color: black;
+}
+
+nav a {
+  line-height: 60px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-underline {
+  height: 3px;
+  background-color: #5f939a;
+}
+
+.dropdown-list {
+  position: absolute;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+}
+
+
+/* Styles for the main body */
+
+main {
+  padding: 10px;
+}
+
+#main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main-container > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  background-color: #d8ac9c;
+  text-align: center;
+}
+
+#main-container > div.main-item-hovered {
+  background-color: #5f939a;
+}
