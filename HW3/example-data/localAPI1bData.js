@@ -1,0 +1,58 @@
+// Example data from API 1 Endpoint 2 (GET /launches/:id)
+// https://api.spacexdata.com/v4/launchpads/5e9e4502f509094188566f88 
+let localAPI1LaunchData =
+{
+  "name": "KSC LC 39A",
+  "full_name": "Kennedy Space Center Historic Launch Complex 39A",
+  "locality": "Cape Canaveral",
+  "region": "Florida",
+  "timezone": "America/New_York",
+  "latitude": 28.6080585,
+  "longitude": -80.6039558,
+  "launch_attempts": 35,
+  "launch_successes": 35,
+  "rockets": [
+    "5e9d0d95eda69973a809d1ec",
+    "5e9d0d95eda69974db09d1ed"
+  ],
+  "launches": [
+    "5eb87cfeffd86e000604b34d",
+    "5eb87cfeffd86e000604b34e",
+    "5eb87d00ffd86e000604b34f",
+    "5eb87d01ffd86e000604b350",
+    "5eb87d01ffd86e000604b351",
+    "5eb87d03ffd86e000604b352",
+    "5eb87d04ffd86e000604b353",
+    "5eb87d06ffd86e000604b355",
+    "5eb87d07ffd86e000604b356",
+    "5eb87d09ffd86e000604b358",
+    "5eb87d0cffd86e000604b35a",
+    "5eb87d0dffd86e000604b35b",
+    "5eb87d13ffd86e000604b360",
+    "5eb87d19ffd86e000604b366",
+    "5eb87d24ffd86e000604b36f",
+    "5eb87d2bffd86e000604b375",
+    "5eb87d2dffd86e000604b376",
+    "5eb87d35ffd86e000604b37a",
+    "5eb87d3dffd86e000604b381",
+    "5eb87d43ffd86e000604b385",
+    "5eb87d44ffd86e000604b386",
+    "5eb87d46ffd86e000604b388",
+    "5ed9819a1f30554030d45c29",
+    "5ef6a1e90059c33cee4a828a",
+    "5ef6a2090059c33cee4a828b",
+    "5ef6a2bf0059c33cee4a828c",
+    "5eb87d4dffd86e000604b38e",
+    "5eb87d4effd86e000604b391",
+    "5f8399fb818d8b59f5740d43",
+    "5fbfecce54ceb10a5664c80a",
+    "5fbfecfe54ceb10a5664c80b",
+    "600f9a8d8f798e2a4d5f979e",
+    "5fe3af58b3467846b324215f",
+    "605b4b7daa5433645e37d040",
+    "605b4b95aa5433645e37d041"
+  ],
+  "details": "NASA's historic pad that launched most of the Saturn V and Space Shuttle missions, including Apollo 11. SpaceX initially leased solely for Falcon Heavy and Crew Dragon launches, but the company has also used it for others as well following the damage to SLC-40 in the AMOS-6 explosion. After completing the necessary modifications, the first launch SpaceX performed on the pad was CRS-10 in February 2017. After SLC-40 was back online, 39A was upgraded to support Falcon Heavy and complete the removal of the shuttle-era Rotating Service Structure. More recently, a crew access arm and other safety equipment has been installed in order to launch commercial crew missions. 39A also occasionally launches other Falcon 9 missions between Falcon Heavy and Crew Dragon launches, depending on pad scheduling. The pad may also potentially be upgraded in the future for use with the BFR.",
+  "status": "active",
+  "id": "5e9e4502f509094188566f88"
+};

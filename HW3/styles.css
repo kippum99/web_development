@@ -1,0 +1,122 @@
+/*
+ * Provided CSS for HW3: SpaceX Dashboard 
+ * CS 101 Spring 2021
+
+ * Instructions: This code is provided for you, but defines page styling for index.html.
+ * You are not required to change this CSS, though you may when adding your own features. 
+ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, footer, form, #launches {
+  display: flex;
+}
+
+body {
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+body, button, input {
+  font-family: Roboto, Verdana, sans-serif;
+}
+
+main {
+  flex-grow: 1;
+  width: 80%;
+  margin: 0 auto 10px auto;
+  border: 8px solid black;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+}
+
+#ui-menu {
+  padding: 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #465a88;
+}
+
+h2 {
+  margin: 0; /* override default h2 margin */
+  font-size: 16pt;
+  font-weight: normal;
+}
+
+form {
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+form > * {
+  margin-top: 10px;
+}
+
+button, input {
+  border-radius: 3px;
+  font-size: 12pt;
+}
+
+button {
+  padding: 8px;
+  width: 150px;
+  background-color: white;
+}
+
+input {
+  padding: 4px;
+  width: 140px;
+}
+
+#message-area {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+#launches {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 5px 10px;
+}
+
+#launches article {
+  width: 250px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #7d6b41;
+}
+
+#launches > p {
+  margin: 5px; /* override default p margin */
+}
+
+#launches article > img {
+  width: 200px;
+  height: 200px;
+  object-fit: scale-down;
+}
+
+footer {
+  height: 40px;
+  background-color: #f3f3f3;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  color: #465a88;
+}
+
+footer, #message-area {
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+  Provided HTML for HW3: SpaceX Dashboard
+  CS 101 Spring 2021
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpaceX Launch Data</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="open_cage_api_key.js"></script>
+  <script defer src="spacex.js"></script>
+</head>
+<body>
+  <header>
+    <h1>SpaceX Launch Dashboard</h1>
+  </header>
+  <main>
+    <div id="ui-menu">
+      <h2>SpaceX Launch Date Range</h2>
+      <!-- Feel free to add your own UI elements/search features! -->
+      <form>
+        <label>Start Date: <input type="date" id="start-date"></label>
+        <label>End Date: <input type="date" id="end-date"></label>
+        <button id="fetch-btn">Fetch Data</button>
+      </form>
+    </div>
+    <article id="results-view">
+      <p id="message-area" class="hidden"></p>
+      <div id="launches">
+      </div>
+    </article>
+  </main>
+  <footer>
+    <p>
+      Credit: Data from <a href="https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/l">SpaceX API</a> and
+      <a href="https://opencagedata.com/api">OpenCageData Geocoding API</a>
+    </p>
+  </footer>
+</body>
+</html>
