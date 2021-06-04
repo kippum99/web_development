@@ -5,3 +5,5 @@
 *.zip
 */api_key.txt
 *api_key.js
+.DS_Store
+node_modules

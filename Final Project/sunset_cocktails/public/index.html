@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+     Name: June Kim
+     CS 101 Spring 2021
+     Date: June 2, 2021
+
+     This is the index.html file for Sunset Cocktails website.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>June Kim</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Sunset Cocktails</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Menu</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="menu-view" class="hidden">
+        <div>
+          <section id="menu-container">
+          </section>
+          <aside id="filter-container">
+            <h2>Alcohol Kind: </h2>
+          </aside>
+        </div>
+      </section>
+      <section id="item-view">
+        <img src="cocktail.png" />
+        <div id="item-details">
+          <h2></h2>
+          <p>Price: $<span id="item-price">12</span></p>
+          <p id="item-ingredients">This and that</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
