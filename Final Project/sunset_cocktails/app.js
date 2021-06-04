@@ -17,7 +17,7 @@ const fs = require("fs/promises");
 const globby = require("globby");
 const multer = require("multer");
 
-const DEFAULT_IMAGE = "cocktail.png";
+const DEFAULT_IMAGE = "imgs/cocktail.png";
 const SERVER_ERROR = "Something went wrong onthe server. Please try again later or contact us.";
 
 const app = express();
@@ -70,8 +70,9 @@ app.get("/menu", async (req, res, next) => {
 
 app.get("/menu/:itemId", async (req, res, next) => {
     const itemId = req.params.itemId;
+
     try {
-        return await getItemData(`data/menu/${itemId}.txt`);
+        res.json(await getItemData(`data/menu/${itemId}.txt`));
     }
     catch (err) {
         if (err.code === "ENOENT") {

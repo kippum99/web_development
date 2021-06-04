@@ -2,3 +2,5 @@ vodka
 whiskey
 rum
 tequila
+gin
+ginger beer

@@ -65,7 +65,7 @@
         for (let item of menuItems) {
             let article = gen("article");
             article.className = "item";
-            article.addEventListener("click", showItemDetails(item.id));
+            article.addEventListener("click", () => { showItemDetails(item.id); });
             menuContainer.appendChild(article);
 
             let img = gen("img");
@@ -84,9 +84,45 @@
     }
 
     // Hide menu view and show a single-item view for the given itemId
-    function showItemDetails(itemId) {
+    async function showItemDetails(itemId) {
+        // <img src="imgs/cocktail.png" />
+        // <div id="item-details">
+        //   <h2>cocktail</h2>
+        //   <p>Price: $<span id="item-price">12</span></p>
+        //   <p id="item-ingredients">This and that</p>
+        // </div>
+        let container = qs("#item-view > div");
+
+        try {
+            let itemData = await fetchItem(itemId);
+
+            let img = gen("img");
+            img.src = itemData.imgPath;
+            img.alt = itemData.name;
+            container.appendChild(img);
+
+            let detailsContainer = gen("div");
+            detailsContainer.id = "item-details";
+            container.appendChild(detailsContainer);
+
+            let name = gen("h2");
+            name.textContent = itemData.name;
+            detailsContainer.appendChild(name);
+
+            let price = gen("p");
+            price.textContent = `Price: $${itemData.price}`;
+            detailsContainer.appendChild(price);
+
+            let ingredients = gen("p");
+            ingredients.textContent = itemData.ingredients;
+            detailsContainer.appendChild(ingredients);
+        }
+        catch (err) {
+            displayError(err.message, container);
+        }
+
         id("menu-view").classList.add("hidden");
-        id("item-details").classList.remove("hidden");
+        id("item-view").classList.remove("hidden");
     }
 
     async function loadFilterItems() {
@@ -110,6 +146,15 @@
             label.textContent = filterItem;
             div.appendChild(label);
         }
+    }
+
+    async function fetchItem(itemId) {
+        let url = API_MENU_ENDPOINT + itemId;
+
+        let res = await fetch(url);
+        checkStatus(res);
+
+        return await res.json();
     }
 
     async function getFilterItems() {

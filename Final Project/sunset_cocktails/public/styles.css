@@ -76,7 +76,7 @@ nav li:hover {
 #menu-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .item {
@@ -88,8 +88,11 @@ nav li:hover {
   border-radius: 5px;
   margin: 20px;
   background-color: #09080e;
-  box-shadow: 0px 0px 15px #fff59c;
   text-align: center;
+}
+
+.item:hover {
+  box-shadow: 0px 0px 15px #fff59c;
 }
 
 .item p {
@@ -114,6 +117,13 @@ nav li:hover {
 
 /* Styles for the single-item view */
 
-#item-view {
+#item-view > div {
   display: flex;
+  align-items: center;
+  padding: 50px;
+}
+
+#item-view img {
+  width: 300px;
+  margin-right: 30px;
 }

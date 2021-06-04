@@ -1,0 +1,5 @@
+moscow_mule
+Moscow Mule
+10
+Vodka, ginger, lime, soda
+moscow_mule.png

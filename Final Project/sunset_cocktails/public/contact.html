@@ -4,17 +4,17 @@
      CS 101 Spring 2021
      Date: June 2, 2021
 
-     This is the index.html file for Sunset Cocktails website that shows a menu of drinks or a
-     detailed single-item view.
+     This is the contact.html file for the Contact Us page of Sunset Cocktails website.
 -->
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Sunset Cocktails</title>
+    <title>Sunset Cocktails - Contact Us</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="styles_contact.css">
+    <script defer src="contact.js"></script>
   </head>
   <body>
     <header>
@@ -27,20 +27,23 @@
       </nav>
     </header>
     <main>
-      <section id="menu-view">
+      <form id="contact-form">
         <div>
-          <section id="menu-container">
-          </section>
-          <aside id="filter-container">
-            <h2>Alcohol Kind: </h2>
-          </aside>
+            <label for="name">Name: </label>
+            <input name="name" type="text" required/>
         </div>
-      </section>
-      <section id="item-view" class="hidden">
         <div>
-
+            <label for="email">Email: </label>
+            <input name="email" type="email" required/>
         </div>
-      </section>
+        <div>
+            <label for="message">Message: </label>
+            <textArea name="Message" required></textArea>
+        </div>
+        <button id="submit-btn">Submit</button>
+      </form>
+      <div id="message-box">
+      </div>
     </main>
     <footer>
 

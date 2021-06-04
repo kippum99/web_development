@@ -1,0 +1,26 @@
+/*
+  Name: June Kim
+  CS 101 Spring 2021
+  Date: June 2, 2021
+
+  This is the styles_contact.css page for the contact.html page of Sunset Cocktails website.
+*/
+
+main {
+  padding: 50px;
+}
+
+input, textarea {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#contact-form {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact-form > div {
+  margin: 20px 0px;
+}
