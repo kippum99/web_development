@@ -12,7 +12,7 @@ body {
   background-color: #09080e;
 }
 
-a, h1, h2, li, p, label {
+a, h1, h2, li, p, label, button {
   font-family: 'Julius Sans One', sans-serif;
   text-transform: uppercase;
 }
@@ -32,6 +32,16 @@ li {
 
 p {
   color: #d1f7ff;
+}
+
+button {
+  border: 1px solid;
+  color: #ff2a6d;
+  background-color: transparent;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .hidden {
@@ -93,6 +103,7 @@ nav li:hover {
 
 .item:hover {
   box-shadow: 0px 0px 15px #fff59c;
+  cursor: pointer;
 }
 
 .item p {

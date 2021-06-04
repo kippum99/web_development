@@ -4,18 +4,18 @@
      CS 101 Spring 2021
      Date: June 2, 2021
 
-     This is the contact.html file for the Contact Us page of Sunset Cocktails website.
+     This is the admin.html file for the admin page of Sunset Cocktails website.
 -->
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Sunset Cocktails - Contact Us</title>
+    <title>Sunset Cocktails - Admin</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles_form.css">
     <script src="utils.js"></script>
-    <script defer src="contact.js"></script>
+    <script defer src="admin.js"></script>
   </head>
   <body>
     <header>
@@ -28,19 +28,23 @@
       </nav>
     </header>
     <main>
-      <h2>Contact Us</h2>
-      <form id="contact-form">
+      <h2>Add New Item</h2>
+      <form id="add-item-form">
+        <div>
+          <label for="id">Unique ID: </label>
+          <input name="id" type="text" required/>
+        </div>
         <div>
             <label for="name">Name: </label>
             <input name="name" type="text" required/>
         </div>
         <div>
-            <label for="email">Email: </label>
-            <input name="email" type="email" required/>
+            <label for="price">Price (US Dollars): </label>
+            <input name="price" type="number" min=0 required/>
         </div>
         <div>
-            <label for="message">Message: </label>
-            <textArea name="message" required></textArea>
+            <label for="ingredients">Ingredients: </label>
+            <textArea name="ingredients" required></textArea>
         </div>
         <button id="submit-btn">Submit</button>
       </form>

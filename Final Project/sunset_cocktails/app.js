@@ -17,8 +17,8 @@ const fs = require("fs/promises");
 const globby = require("globby");
 const multer = require("multer");
 
-const DEFAULT_IMAGE = "imgs/cocktail.png";
-const SERVER_ERROR = "Something went wrong onthe server. Please try again later or contact us.";
+const DEFAULT_IMAGE = "cocktail.png";
+const SERVER_ERROR = "Something went wrong on the server. Please try again later or contact us.";
 
 const app = express();
 
@@ -36,7 +36,7 @@ app.use(multer().none());
 app.use(express.static("public"));
 
 
-/* API endpoints */
+/* GET endpoints */
 
 /**
  * Returns an array of all the items in the menu as a JSON response, or filtered items if a query
@@ -64,7 +64,7 @@ app.get("/menu", async (req, res, next) => {
     catch (err) {
         res.status(500);
         err.message = SERVER_ERROR;
-        next(err);
+        return next(err);
     }
 });
 
@@ -83,7 +83,7 @@ app.get("/menu/:itemId", async (req, res, next) => {
             res.status(500);
             err.message = SERVER_ERROR;
         }
-        next(err);
+        return next(err);
     }
 })
 
@@ -98,9 +98,85 @@ app.get("/alcohol_kinds", async (req, res, next) => {
     catch (err) {
         res.status(500);
         err.message = SERVER_ERROR;
-        next(err);
+        return next(err);
     }
 })
+
+
+/* POST endpoints */
+
+app.post("/contact", async (req, res, next) => {
+    let msgJSON;
+
+    if (req.body.name && req.body.email && req.body.message) {
+        msgJSON = { name: req.body.name,
+                    email: req.body.email,
+                    message: req.body.message
+                  };
+    }
+    else {
+        res.status(400);
+        return next(Error("Please provide all parameters (name, email, message)"));
+    }
+
+    try {
+        // Get previous messages
+        let allMessages = JSON.parse(await fs.readFile("data/messages.json", "utf8"));
+        allMessages.push(msgJSON);
+
+        // Add current message
+        await fs.writeFile("data/messages.json", JSON.stringify(allMessages, null, 2), "utf8");
+
+        res.type("text");
+        res.send("Thank you for contacting us! We will get back to you as soon as possible.");
+    }
+    catch (err) {
+        res.status(500);
+        err.message = SERVER_ERROR;
+        return next(err);
+    }
+});
+
+app.post("/addItem", async (req, res, next) => {
+    // String containing ID, name, price, ingredients, imgPath separated by new lines
+    let itemData;
+
+    if (req.body.id) {
+        // List of filenames containing item data, where each one is {itemId}.txt
+        let filenamesList = await fs.readdir("data/menu");
+
+        if (filenamesList.includes(req.body.id + ".txt")) {
+            res.status(400);
+            return next(Error("The provided ID already exists."));
+        }
+    }
+
+    if (req.body.id && req.body.name && req.body.price && req.body.ingredients) {
+        itemData = [req.body.id + "\n"
+                    + req.body.name + "\n"
+                    + req.body.price + "\n"
+                    + req.body.ingredients + "\n"
+                    + DEFAULT_IMAGE
+                   ];
+    }
+    else {
+        res.status(400);
+        return next(Error("Please provide all parameters (id, name, price, ingredients)"));
+    }
+
+    try {
+        let filePath = "data/menu/" + req.body.id + ".txt";
+        await fs.writeFile(filePath, itemData, "utf8");
+
+        res.type("text");
+        res.send("The item has been successfully added!");
+    }
+    catch (err) {
+        res.status(500);
+        err.message = SERVER_ERROR;
+        return next(err);
+    }
+});
 
 
 /* Helper functions for endpoints */

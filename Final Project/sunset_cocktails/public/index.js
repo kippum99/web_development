@@ -53,7 +53,7 @@
         }
 
         let res = await fetch(url);
-        checkStatus(res);
+        await checkStatus(res);
 
         return await res.json();
     }
@@ -168,86 +168,6 @@
         }
     }
 
-
-    /* Helper functions for fetching from API */
-
-    /**
-     * Helper function to return the Response object if successful, otherwise
-     * throws an Error with an error status and corresponding text.
-     *
-     * @param {Response} response - response object to check for success/error
-     * @returns {object} - Response if status code is ok (200-level)
-     */
-    function checkStatus(response) {
-        if (!response.ok) {
-        throw Error("Error in request: " + response.statusText);
-        }
-        return response; // a Response object
-    }
-
-    // /**
-    //  * Displays an error message on the page, hiding any previous results.
-    //  * If errMsg is passed as a string, that string is used to customize an error message.
-    //  * Otherwise (the errMsg is an object or missing), a generic message is displayed.
-    //  *
-    //  * @param {String} errMsg - optional specific error message to display on page.
-    //  */
-    // function handleError(errMsg) {
-    //     if (typeof errMsg === "string") {
-    //     id("message-area").textContent = errMsg;
-    //     } else {
-    //     // the err object was passed, don't want to show it on the page;
-    //     // instead use generic error message.
-    //     id("message-area").textContent = "An error ocurred fetching the launch data";
-    //     }
-    //     id("message-area").classList.remove("hidden");
-    // }
-
-    function displayError(errMsg, container) {
-        let msg = gen("p");
-        msg.textContent = errMsg;
-        container.appendChild(msg);
-    }
-
-
-    /* Helper functions for DOM access and manipulation */
-
-    /**
-     * Returns the element that has the ID attribute with the specified value.
-     *
-     * @param {string} idName - element ID
-     * @returns {object} DOM object associated with id.
-     */
-    function id(idName) {
-        return document.getElementById(idName);
-    }
-
-    /**
-     * Returns the first element that matches the given CSS selector.
-     * @param {string} query - CSS query selector.
-     * @returns {object[]} array of DOM objects matching the query.
-     */
-    function qs(query) {
-        return document.querySelector(query);
-    }
-
-    /**
-     * Returns the array of elements that match the given CSS selector.
-     * @param {string} query - CSS query selector
-     * @returns {object[]} array of DOM objects matching the query.
-     */
-    function qsa(query) {
-        return document.querySelectorAll(query);
-    }
-
-    /**
-     * Alias function for returning a DOM element represented by `el`.
-     * @param {String} el - String representation of DOM element, e.g. "p".
-     * @returns {DOMElement} - element corresponding to `el`
-     */
-    function gen(el) {
-        return document.createElement(el);
-    }
 
     init();
 })();
