@@ -138,3 +138,15 @@ nav li:hover {
   width: 300px;
   margin-right: 30px;
 }
+
+
+/* Styles for the footer */
+
+footer p {
+  text-align: center;
+  font-size: 7pt;
+}
+
+footer p a {
+  color: #05d9e8;
+}
